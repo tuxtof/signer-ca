@@ -61,9 +61,9 @@ func main() {
 			"Enabling this will ensure there is only one active controller manager.")
 	flag.StringVar(&leaderElectionID, "leader-election-id", "signer-ca-leader-election",
 		"The name of the configmap used to coordinate leader election between controller-managers.")
-	flag.StringVar(&signerName, "signer-name", "example.com/foo", "Only sign CSR with this .spec.signerName.")
-	flag.StringVar(&caCertPath, "ca-cert-path", "/etc/pki/example.com/foo/ca.pem", "Sign CSR with this certificate file.")
-	flag.StringVar(&caKeyPath, "ca-key-path", "/etc/pki/example.com/foo/ca-key.pem", "Sign CSR with this private key file.")
+	flag.StringVar(&signerName, "signer-name", "kubernetes.io/legacy-unknown", "Only sign CSR with this .spec.signerName.")
+	flag.StringVar(&caCertPath, "ca-cert-path", "/etc/pki/kubernetes.io/legacy-unknown/ca.pem", "Sign CSR with this certificate file.")
+	flag.StringVar(&caKeyPath, "ca-key-path", "/etc/pki/kubernetes.io/legacy-unknown/ca-key.pem", "Sign CSR with this private key file.")
 	flag.DurationVar(&certificateDuration, "certificate-duration", time.Hour, "The duration of the signed certificates.")
 	flag.BoolVar(&debugLogging, "debug-logging", true, "Enable debug logging.")
 	flag.Parse()

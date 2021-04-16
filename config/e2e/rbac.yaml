@@ -1,12 +1,12 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: example-com-foo-signer
+  name: kubernetes-io-legacy-unknown-signer
 rules:
 - apiGroups:
   - certificates.k8s.io
   resourceNames:
-  - example.com/foo
+  - kubernetes.io/legacy-unknown
   resources:
   - signers
   verbs:
@@ -15,11 +15,11 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: manager:example-com-foo-signer
+  name: manager:kubernetes-io-legacy-unknown-signer
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: example-com-foo-signer
+  name: kubernetes-io-legacy-unknown-signer
 subjects:
 - kind: ServiceAccount
   name: default

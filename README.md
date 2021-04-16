@@ -1,3 +1,6 @@
+This fork allow signing of kubernetes.io/legacy-unknown request
+
+
 # signer-ca
 
 `signer-ca` is an operator for automatically signing an *approved* [CertificateSigningRequest](https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/#create-a-certificate-signing-request-object-to-send-to-the-kubernetes-api).
