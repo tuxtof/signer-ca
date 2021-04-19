@@ -1,4 +1,4 @@
-This fork allow signing of kubernetes.io/legacy-unknown request
+This fork allow signing csr request with kubernetes.io/legacy-unknown signer. This is usefull for distribution which for security reasons don't implement kube-controller-manager signing feature and remove CA from the hosts himself.
 
 
 # signer-ca
